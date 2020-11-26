@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(54, 39, 39);
+}
+
+/* Main */
+.main {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.main__inner {
+    padding: 20px;
+}
+
+/* Header */
+.header__title {
+    text-align: center;
+}
