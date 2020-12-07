@@ -47,7 +47,7 @@ function displayListItem() {
   });
 }
 
-// 
+// Храним чекбокс в памяти
 list.addEventListener('change', function(event) {
   let idCheckBox = event.target.getAttribute('id');
   let valueLabel = list.querySelector('[for=' + idCheckBox +']').innerHTML;
@@ -56,9 +56,13 @@ list.addEventListener('change', function(event) {
     if (item.itemName === valueLabel) {
       item.checked = !item.checked;
       localStorage.setItem('todo', JSON.stringify(listArr));
-    } 
-  });
+    }
 
-  let input = event.target;
-  input.classList.add('item__done');
+    if (item.checked == true) {
+      list.querySelector('[for=' + idCheckBox +']').className = 'item__done';
+      console.log(event.target);
+    } else {
+      list.querySelector('[for=' + idCheckBox +']').className = '';
+    }
+  });
 });
